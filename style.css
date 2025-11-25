@@ -5,6 +5,12 @@
 
 }
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: b;
+}
+
 
 main{
     width: 100vw;
@@ -35,11 +41,14 @@ main{
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 0 20px #090f16;
+    border-radius: 8px;
     /* background-color:red; */
 }
 
 .dev-profile{
     width: 100%;
+    height: auto;
+    /* background-color: white; */
 }
 
 .dev-contact{
@@ -53,8 +62,10 @@ main{
 
 .dev-sidebar img{
     width: 100%;
-    height: 350px;
+    height: 300px;
     margin-bottom: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .dev-sidebar h1{
@@ -69,7 +80,7 @@ main{
 .dev-sidebar p{
     text-align: center;
     color: var(--background-color);
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 400;
     font-family:Arial, Helvetica, sans-serif;
 }
@@ -104,10 +115,10 @@ main{
     border-top: 1px solid rgb(241, 239, 239, 0.2);
     color: var(--background-color);
     font-size: 1.2em;
-    /* cursor: pointer; */
+    cursor: pointer;
     text-align: center;
+    text-decoration: none;
     /* border-bottom: 1px solid rgb(241, 239, 239, 0.2); */
-
 
 }
 
@@ -141,7 +152,8 @@ main{
 #about-section h1{
     font-size: 2em;
     color: var(--secondary-color);
-    font-weight: 500;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 
@@ -182,6 +194,9 @@ main{
     height: auto;
     display: grid;
     place-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid rgb(241, 239, 239, 0.2);
 }
 
 .skill-sets-container{
@@ -191,10 +206,11 @@ main{
     /* background-color: red; */
 }
 
-.skill-sets-container h2{
-    font-size: 2rem;
-    color:var(--secondary-color);
+.skill-sets-container h1{
+    font-size: 2em;
+    color: var(--secondary-color);
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .skill-sets-container h3{
@@ -232,12 +248,153 @@ main{
     background-color: rgb(255, 255, 255);
 }
 
- .fill-cont .fill{
-    width: 75%;
+ .fill-cont #fill-html{
+    width: 99%;
     height: 100%;
-    background-color: rgb(151, 27, 124);
+    background-color: rgb(40, 124, 6);
 }
 
+.fill-cont #fill-javascript{
+    width: 70%;
+    height: 100%;
+    background-color: rgb(238, 142, 33);
+}
+
+.fill-cont #fill-tailwind{
+    width: 75%;
+    height: 100%;
+    background-color: rgb(221, 224, 44);
+}
+
+.fill-cont #fill-bootstrap{
+    width: 70%;
+    height: 100%;
+    background-color: rgb(238, 142, 33);
+}
+
+.fill-cont #fill-css{
+    width: 95%;
+    height: 100%;
+    background-color: rgb(54, 182, 4);
+}
+
+.fill-cont #fill-react{
+    width: 78%;
+    height: 100%;
+    background-color: rgb(125, 224, 44);
+}
+
+
+.fill-cont #fill-php{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(224, 32, 18);
+}
+
+.fill-cont #fill-sql{
+    width: 80%;
+    height: 100%;
+    background-color: rgb(163, 224, 18);
+}
+
+
+#portifolio-section{
+    width:100%;
+    height:auto;
+    display:grid;
+    place-items: center;
+    color:white;
+    padding-bottom: 50px;
+    border-bottom: 2px solid rgb(241, 239, 239, 0.2);
+    /* background-color: green; */
+}
+
+.projects-content{
+    width: 100%;
+    height: auto;
+    /* display: flex;
+    flex-direction: column; */
+    /* background-color: green; */
+}
+
+.projects-content h1{
+    font-size: 2em;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.projects-content .projects{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.projects .project{
+    border-radius: 8px;
+    box-shadow: 0 0 10px black;
+    padding: 10px;
+    margin-left: 10px;
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+.projects .project:hover img{
+    transform: scale(1.05);
+}
+
+.project img{
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition:transform .5s ease-in-out;
+}
+
+.project h2{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+
+.project .project-stack{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    /* background-color: green; */
+}
+
+
+.project-stack span{
+    padding: 2px 5px;
+    border-radius: 60px;
+    background-color: rgba(148, 147, 147, 0.514);
+    font-size: 1em;
+}
+
+.project-actions{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    /* background-color: red; */
+}
+
+.project-actions button{
+    width: 50%;
+    height: 35px;
+    border-radius: 8px;
+    /* background-color: green; */
+}
+
+.project-actions .btn-primary{
+    background-color: var(--secondary-color);
+}
+
+.project-actions .btn-secondary{
+    border: 2px solid var(--secondary-color);
+}
 
 #services-section{
     width:100%;
@@ -245,6 +402,8 @@ main{
     display:grid;
     place-items: center;
     color:white;
+    padding-bottom: 50px;
+    border-bottom: 2px solid rgb(241, 239, 239, 0.2);
 }
 
 .services-container{
@@ -252,10 +411,25 @@ main{
     height:auto;
 }
 
+.services-container h2{
+    font-size: 2em;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* .services-container h2{
+    font-size: 2rem;
+    color:var(--secondary-color);
+    font-weight: 500;
+    text-align: center;
+} */
+
 .services{
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap:10px;
+    grid-gap:20px;
+    padding-left: 5px;
 }
 
 .service{
@@ -265,8 +439,22 @@ main{
     padding: 10px 25px;
     gap: 5px;
     text-align: center;
-    background-color:red;
+    transition: background 0.3s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0 0 10px black;
+    /* background-color:red; */
 }
+
+.service:hover {
+    background-color:var(--secondary-color)
+}
+
+.service h3{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+
 
 .service i{
     font-size: 3rem;
@@ -274,7 +462,5 @@ main{
     transition: background-color 0.3s ease-out, color 0.3s ease-out;
 }
 
-.service i:hover{
-    background-color:green; 
-    color: black;
-}
+
+

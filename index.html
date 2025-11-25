@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omolo</title>
+    <title>Omolo Pasikali</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
-    <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="responsiveness.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-</head>
+
 <body>
     <main>
         <div class="portifolio-content">
@@ -17,7 +17,7 @@
                 <div class="dev-profile">
                     <img src="images/IMG-20251015-WA0022.jpg" alt="Omolo Pasikali">
                     <h1>Omolo Pasikali</h1>
-                    <p>Frontend Developer</p>
+                    <p id="typingText"></p>
                 </div>
 
                 <div class="dev-contact">
@@ -40,12 +40,16 @@
                         <h1>About Me</h1>
                         <p> I am a multidisciplinary technology professional specializing in Frontend Development, Database Design & Administration, UI/UX Design, and Graphic Design. I bridge the gap between functionality and aesthetics by building digital solutions that are not only visually compelling but also structurally sound and performance-driven.
 
-                            With a strong foundation in frontend technologies, I create responsive, intuitive, and user-focused interfaces that deliver seamless experiences across devices. My background in database design and administration allows me to architect efficient, secure, and scalable data systems that support business growth and operational excellence.
-
-                            Beyond development, I bring a creative edge through UI/UX and graphic design — transforming ideas into engaging visual experiences. I focus on clarity, usability, and design strategy to ensure that every product I work on communicates effectively and performs flawlessly.
-
-                            I am passionate about continuous improvement, problem-solving, and leveraging technology to create impactful digital experiences. My goal is simple: to design and develop solutions that are as powerful behind the scenes as they are beautiful on the surface.
+                            With a strong foundation in frontend technologies. 
                         </p>
+                        <br>
+                        <p>I create responsive, intuitive, and user-focused interfaces that deliver seamless experiences across devices.</p>
+
+                        <p>My background in database design and administration allows me to architect efficient, secure, and scalable data systems that support business growth and operational excellence.</p>
+                        <br>
+                        <p>Beyond development, I bring a creative edge through UI/UX and graphic design - transforming ideas into engaging visual experiences. I focus on clarity, usability, and design strategy to ensure that every product I work on communicates effectively and performs flawlessly.</p>
+                        <br>
+                        <p>I am passionate about continuous improvement, problem-solving, and leveraging technology to create impactful digital experiences. My goal is simple: to design and develop solutions that are as powerful behind the scenes as they are beautiful on the surface.</p>
                     </div>
 
                     <div class="about-statistics">
@@ -68,65 +72,65 @@
 
                 <section id="skills-section">
                     <div class="skill-sets-container">
-                        <h2>MY SKILLS</h2>
+                        <h1>My Skills</h1>
 
                         <div class="skill-sets">
                             <div class="skill-set">
                                 <div class="skill-set-content">
                                     <h3>HTML</h3>
                                     <div class="fill-cont">
-                                        <div class="fill"></div>
+                                        <div class="fill" id="fill-html"></div>
                                     </div>
                                 </div>
 
                                 <div class="skill-set-content">
-                                    <h3>HTML</h3>
+                                    <h3>Javascript</h3>
                                     <div class="fill-cont">
-                                        <div class="fill"></div>
+                                        <div class="fill" id="fill-javascript"></div>
                                     </div>
                                 </div>
 
                                 <div class="skill-set-content">
-                                    <h3>HTML</h3>
+                                    <h3>Tilwind</h3>
                                     <div class="fill-cont">
-                                        <div class="fill"></div>
+                                        <div class="fill" id="fill-tailwind" ></div>
                                     </div>
                                 </div>
 
                                 <div class="skill-set-content">
-                                    <h3>HTML</h3>
+                                    <h3>Bootstrap</h3>
                                     <div class="fill-cont">
-                                        <div class="fill"></div>
+                                        <div class="fill" id="fill-bootstrap"></div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="skill-set">
                                 <div class="skill-set-content">
-                                    <h3>HTML</h3>
+                                    <h3>CSS</h3>
                                     <div class="fill-cont">
-                                        <div class="fill"></div>
+                                        <div class="fill" id="fill-css"></div>
                                     </div>
                                 </div>
 
                                 <div class="skill-set-content">
-                                    <h3>HTML</h3>
+                                    <h3>React</h3>
                                     <div class="fill-cont">
-                                        <div class="fill"></div>
+                                        <div class="fill" id="fill-react"></div>
                                     </div>
                                 </div>
 
                                 <div class="skill-set-content">
-                                    <h3>HTML</h3>
+                                    <h3>PHP</h3>
                                     <div class="fill-cont">
-                                        <div class="fill"></div>
+                                        <div class="fill" id="fill-php"></div>
                                     </div>
                                 </div>
 
                                 <div class="skill-set-content">
-                                    <h3>HTML</h3>
+                                    <h3>SQL</h3>
                                     <div class="fill-cont">
-                                        <div class="fill"></div>
+                                        <div class="fill" id="fill-sql"></div>
                                     </div>
                                 </div>
                             </div>
@@ -137,39 +141,124 @@
                         
                 </section>
 
+                <section id="portifolio-section">
+                    <div class="projects-content">
+                        <h1>Projects</h1>
+
+                        <div class="projects">
+                            <div class="project">
+                                <img src="images/agribuddy.png" alt="agribuddy">
+                                <h2>Agribuddy</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quaerat autem libero veniam. Deleniti doloremque iusto dignissimos ratione, ad maiores!</p>
+                                <div class="project-stack">
+                                    <span>React JS</span>
+                                    <span>Node.JS</span>
+                                    <span>Express.JS</span>
+                                    <span>MongoDB</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="btn-primary">Live Preview</button>
+                                    <button class="btn-secondary">Code Preview</button>
+                                </div>
+                            </div>
+
+                            <div class="project">
+                                <img src="images/Campusbllot.png" alt="agribuddy">
+                                <h2>Campus Ballot</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quaerat autem libero veniam. Deleniti doloremque iusto dignissimos ratione, ad maiores!</p>
+                                <div class="project-stack">
+                                    <span>React JS</span>
+                                    <span>Node.JS</span>
+                                    <span>Express.JS</span>
+                                    <span>MongoDB</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="btn-primary">Live Preview</button>
+                                    <button class="btn-secondary">Code Preview</button>
+                                </div>
+                            </div>
+
+
+                            <div class="project">
+                                <img src="images/Tourism.png" alt="agribuddy">
+                                <h2>Olam Tourism</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quaerat autem libero veniam. Deleniti doloremque iusto dignissimos ratione, ad maiores!</p>
+                                <div class="project-stack">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>Javascript</span>
+                                    <span>PHP</span>
+                                    <span>MySQL</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="btn-primary">Live Preview</button>
+                                    <button class="btn-secondary">Code Preview</button>
+                                </div>
+                            </div>
+
+
+                            <div class="project">
+                                <img src="images/E-commerce.png" alt="agribuddy">
+                                <h2>Olam Cart</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quaerat autem libero veniam. Deleniti doloremque iusto dignissimos ratione, ad maiores!</p>
+                                <div class="project-stack">
+                                    <span>React JS</span>
+                                    <span>Express.JS</span>
+                                    <span>Node.JS</span>
+                                    <span>OracleDB</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="btn-primary">Live Preview</button>
+                                    <button class="btn-secondary">Code Preview</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
                 <section id="services-section">
                     <div class="services-container">
-                        <h1>Services</h1>
-                        <h1>What I offer</h1>
+
+                        <h2>What I offer</h2>
 
                         <div class="services">
                             <div class="service">
                                 <i class="fa-solid fa-database"></i>
-                                <h2>Database Design and Development</h2>
+                                <h3>Database Design and Development</h3>
                                 <p>Architecting scalable relational schemas and optimized data structures to ensure data integrity and high-performance retrieval for complex application backends.</p>
                             </div>
                                 
 
                             <div class="service">
                                 <i class="fa-solid fa-laptop-code"></i>
-                                <h2>Web Developmet</h2>
+                                <h3>Web Developmet</h3>
                             </div>
                             <div class="service">
                                 <i class="fa-solid fa-object-group"></i>
-                                <h2>UI/UX Design</h2>
+                                <h3>UI/UX Design</h3>
                                 <p>Designing intuitive, user-centered interfaces and seamless digital experiences that prioritize functionality, accessibility, and user satisfaction.</p>
                             </div>
                             <div class="service">
                                 <i class="fa-solid fa-bezier-curve"></i>
-                                <H2>Graphic Design</H2>
+                                <h3>Graphic Design</h3>
                                 <p>Creating high-impact visual identities, branding, and digital assets that capture attention and communicate your message with clarity.</p>
                             </div>
                         </div>
                     </div>
                 </section>
+
+                <section id="working-experience">
+                    <div class="experience-content">
+                        <h1>Hello</h1>
+                    </div>
+                </section>
+
+                
             </div>
         </div>
     </main>
-        
+   
+    <script src="script.js"></script>
 </body>
 </html>
