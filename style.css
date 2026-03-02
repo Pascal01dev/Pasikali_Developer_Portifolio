@@ -1,19 +1,10 @@
 :root{
     --primary-color: #2d3e50;
     --secondary-color: #2ecc71;
-    --background-color: #ecf0f1;
-    --text-color: #2c3e50;
+    --background-color: #cdcfcf;
+
 }
 
-svg{
-    width: 50px;
-    height: 50px;
-}
-
-img{
-    width: 100px;
-    height: 100px;
-}
 
 main{
     width: 100vw;
@@ -28,7 +19,8 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
+    padding: 0 0 0 80px;
     position: fixed;
     /* background-color: gray; */
 }
@@ -36,12 +28,91 @@ main{
 .dev-sidebar{
     width: 30%;
     height: 100%;
-    background-color:red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 20px #090f16;
+    /* background-color:red; */
+}
+
+
+.dev-sidebar img{
+    width: 100%;
+    height: 400px;
+    margin-bottom: 15px;
+}
+
+.dev-sidebar h1{
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 2em;
+    font-weight: 600;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+}
+
+.dev-sidebar p{
+    text-align: center;
+    color: var(--background-color);
+    font-size: 1.5em;
+    font-weight: 400;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.dev-media{
+    display: flex;
+    width: 60%;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 36px;
+}
+
+.dev-media svg{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: rgb(241, 239, 239, 0.1);
+}
+
+.side-bar-btn{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    /* background-color: palegoldenrod; */
+}
+
+.side-bar-btn a{
+    width: 50%;
+    height: 40px;
+    border-top: 1px solid rgb(241, 239, 239, 0.2);
+    color: var(--background-color);
+    font-size: 1.2em;
+    /* cursor: pointer; */
+    text-align: center;
+    /* border-bottom: 1px solid rgb(241, 239, 239, 0.2); */
+
+
+}
+
+.side-bar-btn .btn-1{
+    border-right: 1px solid rgb(241, 239, 239, 0.2);
+
 }
 
 .portifolio-details{
-    width: 65%;
+    width: 75%;
     height: 100%;
     padding-right: 100px;
     overflow: scroll;
+}
+
+/* ABOUT SECTION STARTS HERE */
+#about-section{
+    width: 100%;
+    height: auto;
+    padding-bottom: 100px;
+    border-bottom: 2px solid rgb(241, 239, 239, 0.2);
+    /* background-color: rgba(236, 40, 40, 0.1); */
 }
