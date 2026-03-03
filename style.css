@@ -9,13 +9,15 @@
 main{
     width: 100vw;
     height: 100vh;
+    display: grid;
+    place-items: center;
     padding: 20px;
     background-color: var(--primary-color);
 }
 
 .portifolio-content{
     width: 100%;
-    height: 100%;
+    height: 98%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,18 +29,31 @@ main{
 
 .dev-sidebar{
     width: 30%;
-    height: 100%;
+    height: 99%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     box-shadow: 0 0 20px #090f16;
     /* background-color:red; */
+}
+
+.dev-profile{
+    width: 100%;
+}
+
+.dev-contact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .dev-sidebar img{
     width: 100%;
-    height: 400px;
+    height: 350px;
     margin-bottom: 15px;
 }
 
@@ -48,7 +63,7 @@ main{
     font-size: 2em;
     font-weight: 600;
     font-family:Arial, Helvetica, sans-serif;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
 
 .dev-sidebar p{
@@ -62,10 +77,10 @@ main{
 .dev-media{
     display: flex;
     width: 60%;
-    margin-top: 100px;
+    /* margin-top: 80px; */
     align-items: center;
     justify-content: space-around;
-    margin-bottom: 36px;
+    margin-bottom: 10px;
 }
 
 .dev-media svg{
@@ -104,6 +119,9 @@ main{
 .portifolio-details{
     width: 75%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     padding-right: 100px;
     overflow: scroll;
 }
@@ -111,8 +129,65 @@ main{
 /* ABOUT SECTION STARTS HERE */
 #about-section{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     height: auto;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     border-bottom: 2px solid rgb(241, 239, 239, 0.2);
     /* background-color: rgba(236, 40, 40, 0.1); */
+}
+
+#about-section h1{
+    font-size: 2em;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+
+#about-section p{
+    color: white;
+}
+
+.about-statistics{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 0 5px;
+        /* background-color: palevioletred; */
+}
+
+.about-statistics .stat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px #090f16;
+}
+
+.about-statistics .stat h2{
+    color: var(--secondary-color);
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* SKILLS SECTION STARTS HERE */
+
+#skills-section{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.skill-sets .fill-container{
+    width: 100%;
+    height: 5px;
+    margin-bottom: 20px;
+    background-color: white;
 }
