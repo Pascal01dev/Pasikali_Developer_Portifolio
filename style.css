@@ -181,13 +181,11 @@ main{
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    place-items: center;
 }
 
-.skill-sets .fill-container{
-    width: 100%;
-    height: 5px;
-    margin-bottom: 20px;
-    background-color: white;
+.skill-sets-content{
+    display: flex;
+    flex-direction:column;
 }
+
