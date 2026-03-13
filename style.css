@@ -184,8 +184,57 @@ main{
     place-items: center;
 }
 
-.skill-sets-content{
+.skill-sets-container{
+    width: 100%;
     display: flex;
     flex-direction:column;
+    /* background-color: red; */
+}
+
+.skill-sets-container h2{
+    font-size: 2rem;
+    color:var(--secondary-color);
+    font-weight: 600;
+}
+
+.skill-sets-container h3{
+    font-size: 1rem;
+    color:var(--background-color);
+    font-weight: 600;
+}
+
+
+.skill-sets{
+    width:100%;
+    height: auto;
+    display: flex;
+    gap:50px;
+    /* background-color: green; */
+}
+
+.skill-set{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+    /* background-color: pink; */
+}
+
+.skill-set .skill-set-content{
+    width:100%;
+    /* height: 5px; */
+    /* background-color: white; */
+}
+
+.skill-set-content .fill-cont{
+    width: 100%;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+ .fill-cont .fill{
+    width: 75%;
+    height: 100%;
+    background-color: rgb(151, 27, 124);
 }
 
