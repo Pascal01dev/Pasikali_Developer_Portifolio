@@ -5,6 +5,9 @@
 
 }
 
+html{
+    navi
+}
 
 main{
     width: 100vw;
@@ -13,6 +16,7 @@ main{
     place-items: center;
     padding: 20px;
     background-color: var(--primary-color);
+    /* background-color: red; */
 }
 
 .portifolio-content{
@@ -122,12 +126,55 @@ main{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-right: 100px;
+    padding-right: 20px;
     overflow: scroll;
 }
 
+/* HEADER */
+header{
+    width: 100%;
+    height:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: #2d3e50b9;
+}
+
+header h1{
+    width:50px;
+    height: 50px;
+    font-size:2rem;
+    font-weight:600;
+    text-align: center;
+    color:white;
+    border-radius: 50%;
+    background-color:var(--secondary-color)
+}
+
+header nav{
+    display: flex;
+    align-items:center;
+    gap:60px;
+}
+
+header nav a{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease-out;
+}
+
+header nav a:hover{
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+
 /* ABOUT SECTION STARTS HERE */
-#about-section{
+#About{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -138,14 +185,14 @@ main{
     /* background-color: rgba(236, 40, 40, 0.1); */
 }
 
-#about-section h1{
+#About h1{
     font-size: 2em;
     color: var(--secondary-color);
     font-weight: 500;
 }
 
 
-#about-section p{
+#About p{
     color: white;
 }
 
@@ -182,24 +229,28 @@ main{
     height: auto;
     display: grid;
     place-items: center;
+    padding: 30px 0;
+    /* background-color: red; */
 }
 
 .skill-sets-container{
     width: 100%;
+    height:auto;
     display: flex;
     flex-direction:column;
-    /* background-color: red; */
+
 }
 
 .skill-sets-container h2{
     font-size: 2rem;
+    margin-bottom: 10px;
     color:var(--secondary-color);
     font-weight: 600;
 }
 
 .skill-sets-container h3{
     font-size: 1rem;
-    color:var(--background-color);
+    color:white;
     font-weight: 600;
 }
 
@@ -245,17 +296,30 @@ main{
     display:grid;
     place-items: center;
     color:white;
+    padding:20px 0;
 }
 
 .services-container{
     width:100%;
     height:auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.services-container h1{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.services-container h2{
+    font-size: 1.5rem;
 }
 
 .services{
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap:10px;
+    grid-gap:20px;
 }
 
 .service{
@@ -265,16 +329,18 @@ main{
     padding: 10px 25px;
     gap: 5px;
     text-align: center;
-    background-color:red;
+    background-color: rgb(241, 239, 239, 0.1);
 }
 
 .service i{
     font-size: 3rem;
+    color:var(--secondary-color);
+    background-color: white;
     padding: 10px;
     transition: background-color 0.3s ease-out, color 0.3s ease-out;
 }
 
-.service i:hover{
-    background-color:green; 
-    color: black;
+.service:hover i{
+    background-color:var(--secondary-color); 
+    color: white;
 }
