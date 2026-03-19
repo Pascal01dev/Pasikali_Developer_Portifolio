@@ -1,4 +1,6 @@
-:root{
+
+@media screen and (max-width:768px) {
+    :root{
     --primary-color: #2d3e50;
     --secondary-color: #2ecc71;
     --background-color: #cdcfcf;
@@ -13,43 +15,67 @@
 
 main{
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: grid;
     place-items: center;
-    padding: 20px;
-    background-color: var(--primary-color);
+    padding: 0px;
     /* background-color: red; */
 }
 
 .header-1{
-    display:none;
+    width:100%;
+    height:auto;
+    display: flex;
+    background-color: #2ecc71;
 }
 
 .portifolio-content{
     width: 100%;
-    height: 98%;
+    height: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 50px;
-    padding: 0 0 0 80px;
-    position: fixed;
+    padding: 20px 20px;
+    position: static;
+    background-color: var(--primary-color);
     /* background-color: gray; */
 }
 
 .dev-sidebar{
-    width: 30%;
-    height: 99%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 0 20px #090f16;
+    width: 100%;
+    height: auto;
+    gap: 20px;
     /* background-color:red; */
 }
 
 .dev-profile{
     width: 100%;
+    height: auto;
+    /* background-color: green; */
+}
+
+.dev-profile img{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 15px;
+}
+
+.dev-profile  h1{
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 2em;
+    font-weight: 600;
+    font-family:Arial, Helvetica, sans-serif;
+    /* margin-bottom: 5px; */
+}
+
+.dev-profile p{
+    text-align: center;
+    color: var(--background-color);
+    font-size: 1em;
+    font-weight: 400;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .dev-contact{
@@ -61,41 +87,17 @@ main{
 }
 
 
-.dev-sidebar img{
-    width: 100%;
-    height: 350px;
-    margin-bottom: 15px;
-}
-
-.dev-sidebar h1{
-    text-align: center;
-    color: var(--secondary-color);
-    font-size: 2em;
-    font-weight: 600;
-    font-family:Arial, Helvetica, sans-serif;
-    /* margin-bottom: 5px; */
-}
-
-.dev-sidebar p{
-    text-align: center;
-    color: var(--background-color);
-    font-size: 1.5em;
-    font-weight: 400;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
 .dev-media{
+    width: auto;
     display: flex;
-    width: 60%;
-    /* margin-top: 80px; */
     align-items: center;
-    justify-content: space-around;
-    margin-bottom: 10px;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
 .dev-media svg{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     padding: 5px;
     background-color: rgb(241, 239, 239, 0.1);
 }
@@ -105,6 +107,7 @@ main{
     height: auto;
     display: flex;
     align-items: center;
+    padding-top:10px;
     /* background-color: palegoldenrod; */
 }
 
@@ -127,71 +130,21 @@ main{
 }
 
 .portifolio-details{
-    width: 75%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-right: 20px;
-    overflow: scroll;
-    scroll-behavior:smooth;
+    width: 100%;
+    height: auto;
+    padding-right: 0px;
+    /* background-color: orange; */
 }
 
 /* HEADER */
 header{
-    width: 100%;
-    height:auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    position: sticky;
-    top: 0;
-    padding: 5px;
-    background-color: #2d3e50b9;
-    z-index: 999;
+    display:none;
 }
-
-header h1{
-    width:50px;
-    height: 50px;
-    font-family: 'Bitcount Grid Double Ink';
-    font-size:2rem;
-    font-weight:600;
-    text-align: center;
-    color:var(--bright-color);
-    border-radius: 50%;
-    background-color:var(--secondary-color)
-}
-
-header nav{
-    display: flex;
-    align-items:center;
-    gap:60px;
-}
-
-header nav a{
-    color:var(--bright-color);
-    font-size: 1.5rem;
-    font-weight: bold;
-    transition: color 0.3s ease-out;
-}
-
-header nav a:hover{
-    color: var(--secondary-color);
-    text-decoration: underline;
-}
-
 
 /* ABOUT SECTION STARTS HERE */
 #About{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    height: auto;
-    padding: 50px 0;
-    border-bottom: 2px solid rgb(241, 239, 239, 0.2);
-    /* background-color: rgba(236, 40, 40, 0.1); */
+    padding:0px;
 }
 
 #About h1{
@@ -203,14 +156,13 @@ header nav a:hover{
 
 #About p{
    color:var(--bright-color);
+   font-size: 1em;
 }
 
 .about-statistics{
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    
     padding: 0 5px;
         /* background-color: palevioletred; */
 }
@@ -231,23 +183,19 @@ header nav a:hover{
     font-weight: 600;
 }
 
+.stat p{
+    font-size: 2rem;
+}
+
 /* SKILLS SECTION STARTS HERE */
 
 #Skills{
     width: 100%;
-    height: auto;
-    display: grid;
-    place-items: center;
-    padding: 50px 0;
     /* background-color: red; */
 }
 
 .skill-sets-container{
     width: 100%;
-    height:auto;
-    display: flex;
-    flex-direction:column;
-    gap: 10px;
     /* background-color: orange; */
 }
 
@@ -273,41 +221,42 @@ header nav a:hover{
     width:100%;
     height: auto;
     display: flex;
-    gap:50px;
+    flex-direction: column;
+    gap:30px;
     /* background-color: green; */
 }
 
 .skill-set{
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 30px;  
     /* background-color: pink; */
 }
 
-.skill-set .skill-set-content{
+/* .skill-set .skill-set-content{
     width:100%;
-    /* height: 5px; */
-    /* background-color: white; */
-}
+    height: 5px;
+    background-color: white;
+} */
 
-.skill-set-content .desc{
+/* .skill-set-content .desc{
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
+} */
 
-.skill-set-content .fill-cont{
+/* .skill-set-content .fill-cont{
     width: 100%;
     height: 5px;
     background-color:var(--bright-color);
-}
+} */
 
- .fill-cont .fill-1{
+ /* .fill-cont .fill-1{
     width: 98%;
     height: 100%;
     background-color: var(--secondary-color);
-    /* transform: translateX(-100%); */
+    transform: translateX(-100%);
     transition: transform 0.5s ease-out;
 }
 
@@ -315,7 +264,7 @@ header nav a:hover{
     width: 60%;
     height: 100%;
     background-color:#f0dc2b;
-    /* transform: translateX(-100%); */
+    transform: translateX(-100%);
     transition: transform 0.5s ease-out;
 }
 
@@ -323,7 +272,7 @@ header nav a:hover{
     width: 65%;
     height: 100%;
     background-color:#cc6d2e;
-    /* transform: translateX(-100%); */
+    transform: translateX(-100%);
     transition: transform 0.5s ease-out;
 }
 
@@ -332,7 +281,7 @@ header nav a:hover{
     width: 22%;
     height: 100%;
     background-color:#cc2e2e;
-    /* transform: translateX(-100%); */
+    transform: translateX(-100%);
     transition: transform 0.5s ease-out;
 }
 
@@ -340,7 +289,7 @@ header nav a:hover{
     width: 95%;
     height: 100%;
     background-color:#9dcc2e;
-    /* transform: translateX(-100%); */
+    transform: translateX(-100%);
     transition: transform 0.5s ease-out;
 }
 
@@ -349,7 +298,7 @@ header nav a:hover{
     width: 72%;
     height: 100%;
     background-color:#ccbc2e;
-    /* transform: translateX(-100%); */
+    transform: translateX(-100%);
     transition: transform 0.5s ease-out;
 }
 
@@ -357,7 +306,7 @@ header nav a:hover{
     width: 65%;
     height: 100%;
     background-color:#cc6d2e;
-    /* transform: translateX(-100%); */
+    transform: translateX(-100%);
     transition: transform 0.5s ease-out;
 }
 
@@ -365,13 +314,13 @@ header nav a:hover{
     width: 70%;
     height: 100%;
     background-color:#ccbc2e;
-    /* transform: translateX(-100%); */
+    transform: translateX(-100%);
     transition: transform 0.5s ease-out;
 }
 
-/* .skill-set-content:hover .fill-1{
+.skill-set-content:hover .fill-1{
     transform: translateX(0%);
-} */
+}
 
 
 
@@ -379,7 +328,7 @@ header nav a:hover{
     width: 75%;
     height: 100%;
     background-color: rgb(151, 27, 124);
-}
+} */
 
 #Projects{
     width:100%;
@@ -387,10 +336,10 @@ header nav a:hover{
     padding:20px 0;
 }
 
-.project-container{
+/* .project-container{
     width:100%;
     height:auto;
-}
+} */
 
 .project-container h1{
     font-size:3rem;
@@ -401,7 +350,7 @@ header nav a:hover{
     width:100%;
     height:auto;
     display:grid;
-    grid-template-columns:repeat(2, 1fr);
+    grid-template-columns:repeat(1, 1fr);
     grid-gap: 25px;
 }
 
@@ -548,7 +497,7 @@ header nav a:hover{
 
 .services{
     display:grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap:20px;
 }
 
@@ -573,4 +522,7 @@ header nav a:hover{
 .service:hover i{
     background-color:var(--secondary-color); 
     color: white;
+}
+
+    
 }
