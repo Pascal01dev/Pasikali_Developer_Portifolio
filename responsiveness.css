@@ -1,5 +1,267 @@
-@media screen and (max-width:768px) {
+@media (max-width: 768px) {
     main{
-        color: rebeccapurple;
+        height: auto;
+        display: grid;
+        place-items: center;
+        padding: 0 20px;
+        background-color: var(--primary-color);
+        /* background-color: red; */
     }
+
+    .portifolio-content{
+        flex-direction: column;
+        gap: 50px;
+        padding: 0px;
+        position: static;
+        /* background-color: gray; */
+    }
+
+    .dev-sidebar{
+        width: 100%;
+        height: auto;
+        /* background-color:red; */
+    }
+
+    /* .dev-profile{
+        width: 100%;
+        height: auto;
+        background-color: white;
+    } */
+
+    .dev-sidebar img{
+        height: auto;
+    }
+
+    /* .dev-contact{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: palevioletred;
+    } */
+
+    .portifolio-details{
+        width: 100%;
+        height: auto;
+        gap: 20px;
+        padding-right: 0px;
+        scroll-behavior: smooth;
+    }
+
+    header{
+        display: none;
+    }
+
+    .skill-sets{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        /* background-color: green; */
+    }
+
+    .skill-set{
+        width: 100%;
+        gap: 20px;
+        /* background-color: pink; */
+    }
+
+    .projects-content .projects{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        margin-bottom: 40px;
+    }
+
+
+    .more-projects button{
+        width: 50%;
+    }
+
+
+    .services{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:20px;
+        padding-left: 5px;
+    }
+
+    .experience-content {
+        width: 98%;
+    }
+
+    .experience-cards {
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        /* background-color: blue; */ /* Remove or keep for debugging */
+    }
+
+    .certification-content{
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certificates{
+        width: 100%;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .contacts-content form .input-set{
+        width: 100%;
+        flex-direction: column;
+        /* background-color: green; */
+    }
+
+    .input-set input{
+        width: 100%;
+        height: 35px;
+        padding: 20px;
+        outline: none;
+        border-radius: 8px;
+        background-color: rgb(241, 239, 239, 0.1);
+    }
+
+}
+
+
+@media (max-width: 375px) {
+    main{
+        height: auto;
+        display: grid;
+        place-items: center;
+        padding: 20px;
+        background-color: var(--primary-color);
+        /* background-color: red; */
+    }
+
+    .portifolio-content{
+        flex-direction: column;
+        gap: 50px;
+        padding: 0px;
+        position: static;
+        /* background-color: gray; */
+    }
+
+    .dev-sidebar{
+        width: 100%;
+        height: auto;
+        /* background-color:red; */
+    }
+
+    /* .dev-profile{
+        width: 100%;
+        height: auto;
+        background-color: white;
+    } */
+
+    .dev-sidebar img{
+        height: auto;
+    }
+
+    /* .dev-contact{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: palevioletred;
+    } */
+
+    .portifolio-details{
+        width: 100%;
+        height: auto;
+        gap: 20px;
+        padding-right: 0px;
+        scroll-behavior: smooth;
+    }
+
+    header{
+        display: none;
+    }
+
+    .skill-sets{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        /* background-color: green; */
+    }
+
+    .skill-set{
+        width: 100%;
+        gap: 20px;
+        /* background-color: pink; */
+    }
+
+    .projects-content .projects{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        margin-bottom: 40px;
+    }
+
+
+    .more-projects button{
+        width: 50%;
+    }
+
+
+    .services{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:20px;
+        padding-left: 5px;
+    }
+
+    .experience-content {
+        width: 98%;
+    }
+
+    .experience-cards {
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        /* background-color: blue; */ /* Remove or keep for debugging */
+    }
+
+    .certification-content{
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certificates{
+        width: 100%;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .contacts-content form .input-set{
+        width: 100%;
+        flex-direction: column;
+        /* background-color: green; */
+    }
+
+    .input-set input{
+        width: 100%;
+        height: 35px;
+        padding: 20px;
+        outline: none;
+        border-radius: 8px;
+        background-color: rgb(241, 239, 239, 0.1);
+    }
+
+
+
+}
+@media (max-width: 768px) {
+    
 }

@@ -45,6 +45,14 @@ main{
     /* background-color:red; */
 }
 
+.dev-sidebar img{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
 .dev-profile{
     width: 100%;
     height: auto;
@@ -57,16 +65,11 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* background-color: palevioletred; */
 }
 
 
-.dev-sidebar img{
-    width: 100%;
-    height: 300px;
-    margin-bottom: 15px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
+
 
 .dev-sidebar h1{
     text-align: center;
@@ -135,6 +138,50 @@ main{
     gap: 20px;
     padding-right: 100px;
     overflow: scroll;
+     scroll-behavior: smooth;
+}
+
+header{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px black;
+}
+
+header  .content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+header  .content span{
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+header .content nav{
+    display: flex;
+    gap: 40px;
+}
+
+header .content nav a{
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--secondary-color);
 }
 
 /* ABOUT SECTION STARTS HERE */
@@ -213,6 +260,7 @@ main{
     margin-bottom: 20px;
 }
 
+
 .skill-sets-container h3{
     font-size: 1rem;
     color:var(--background-color);
@@ -240,6 +288,16 @@ main{
     width:100%;
     /* height: 5px; */
     /* background-color: white; */
+}
+
+.skill-set-content .skill-holder{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.skill-holder i{
+    color: white;
 }
 
 .skill-set-content .fill-cont{
@@ -310,18 +368,21 @@ main{
 }
 
 .projects-content{
-    width: 100%;
+    width: 99%;
     height: auto;
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /* background-color: green; */
 }
 
 .projects-content h1{
+    width: 100%;
     font-size: 2em;
     color: var(--secondary-color);
     font-weight: 600;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .projects-content .projects{
@@ -330,6 +391,7 @@ main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+    margin-bottom: 40px;
 }
 
 .projects .project{
@@ -396,6 +458,45 @@ main{
     border: 2px solid var(--secondary-color);
 }
 
+.more-projects{
+    width: 98%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    /* box-shadow: 0 0 10px var(--secondary-color); */
+    text-align: center;
+}
+
+.more-projects h2{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.more-projects p{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.more-projects button{
+    width: 20%;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+}
+
+.more-projects button:hover{
+   
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
 #services-section{
     width:100%;
     height:auto;
@@ -407,7 +508,7 @@ main{
 }
 
 .services-container{
-    width:100%;
+    width:98%;
     height:auto;
 }
 
@@ -462,5 +563,367 @@ main{
     transition: background-color 0.3s ease-out, color 0.3s ease-out;
 }
 
+#working-experience {
+    width: 100%;
+    height: auto;
+    display: grid;
+    place-items: center;
+    color: white;
+    padding-bottom: 50px;
+    border-bottom: 2px solid rgba(241, 239, 239, 0.2);
+}
+
+.experience-content {
+    width: 100%;
+    height: auto; 
+}
+
+.experience-content h1 {
+    font-size: 2em;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
 
 
+.experience-content .experience-contianer {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+
+.experience-contianer .experience-line {
+    width: 5%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+
+.experience-line .experience-bus {
+    width: 5px;
+    height: 100%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    right: 8px; 
+}
+
+/* Base Node setup */
+.experience-line .experience-node {
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    position: absolute;
+    right: 0; /* Aligns smoothly with the flex-end boundary */
+}
+
+/* 4. Align nodes directly to match the grid rows */
+.experience-line .node1 {
+    top: 0px; /* Aligns with the top of Card 1 */
+}
+
+.experience-line .node2 {
+    top: 45%; /* Center node fallback */
+    /* transform: translateY(-50%); */
+}
+
+.experience-line .node3 {
+    bottom: 0px; /* Aligns with the bottom of the last cards */
+}
+
+.experience-node span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+}
+
+/* 5. The Cards Grid - Content drives the height now */
+.experience-cards {
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    /* background-color: blue; */ /* Remove or keep for debugging */
+}
+
+.experience-cards .experience-card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.082);
+    /* box-shadow: 0 0 10px black; */
+}
+
+.experience-card h2{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.experience-card h3{
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+#certifications{
+    width: 100%;
+    height: auto;
+    display: grid;
+    place-items: center;
+    color: white;
+    padding-bottom: 50px;
+    border-bottom: 2px solid rgba(241, 239, 239, 0.2);
+}
+
+.certification-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.certification-content h1{
+    width: 100%;
+    font-size: 2em;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.certificates{
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+    margin-top: 20px;
+
+}
+
+.certificates .certificate{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color:rgba(0, 0, 0, 0.082);
+}
+
+.certificate img{
+    width: 100%;
+}
+
+.certificate h2{
+    font-size: 1.2em;
+}
+
+.certificate h2 span{
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* CONTACTS PAGE BEGINS HERE */
+
+#contacts{
+    width: 100%;
+    height: auto;
+    display: grid;
+    place-items: center;
+    color: white;
+    padding-bottom: 50px;
+    border-bottom: 2px solid rgba(241, 239, 239, 0.2);
+}
+
+.contacts-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts-content h1{
+    width: 100%;
+    font-size: 2em;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contacts-content form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* background-color: red; */
+}
+
+.contacts-content form .input-set{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    /* background-color: green; */
+}
+
+.input-set input{
+    width: 50%;
+    height: 35px;
+    padding: 20px;
+    outline: none;
+    border-radius: 8px;
+    background-color: rgb(241, 239, 239, 0.1);
+}
+
+.contacts-content form textarea{
+     width: 100%;
+    height: 150px;
+    padding: 20px;
+    outline: none;
+    resize: none;
+    border-radius: 8px;
+    background-color: rgb(241, 239, 239, 0.1);
+}
+
+.contacts-content form  button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+}
+
+/* Base Footer Layout */
+.site-footer {
+    background-color: #121212;
+    border-top: 1px solid #232323;
+    padding: 40px 20px;
+    color: #aaa;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Column Specifics */
+.footer-column {
+    flex: 1;
+}
+
+.footer-brand {
+    min-width: 250px;
+}
+
+.footer-title {
+    color: #fff;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #888;
+    margin: 0;
+}
+
+/* Headings & Lists */
+.footer-heading {
+    color: #fff;
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.footer-link {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #00adb5;
+}
+
+/* Connect Row */
+.footer-social-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.accent-link {
+    color: #00adb5;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+
+.accent-link:hover {
+    color: #fff;
+}
+
+.divider {
+    color: #333;
+}
+
+.footer-status {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+    max-width: 1100px;
+    margin: 30px auto 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid #1f1f1f;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #555;
+}
+
+/* Responsive Media Queries (Mobile Breakdown) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .footer-column {
+        min-width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
