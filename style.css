@@ -42,17 +42,15 @@ main{
     justify-content: space-between;
     box-shadow: 0 0 20px #090f16;
     border-radius: 8px;
-    padding: 10px;
+    /* padding: 10px; */
     /* background-color:red; */
 }
 
 .dev-sidebar img{
     width: 100%;
     margin-bottom: 15px;
-    border-radius: 50%;
-    /* box-shadow: 0 5px 10px  white; */
-    /* border-top-left-radius: 8px;
-    border-top-right-radius: 8px; */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .dev-profile{
