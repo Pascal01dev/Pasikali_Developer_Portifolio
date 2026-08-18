@@ -50,7 +50,7 @@ main{
     width: 100%;
     margin-bottom: 15px;
     border-radius: 50%;
-    box-shadow: 0 5px 10px  white;
+    /* box-shadow: 0 5px 10px  white; */
     /* border-top-left-radius: 8px;
     border-top-right-radius: 8px; */
 }
