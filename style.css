@@ -21,37 +21,38 @@ main{
     background-color: var(--primary-color);
 }
 
-.portifolio-content{
+/* 1. Prevent sidebar from stretching vertically in the flex container */
+.portifolio-content {
     width: 100%;
-    height: 98%;
+    height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: flex-start; /* Changed from default center/stretch */
     gap: 50px;
-    padding: 0 0 0 80px;
+    padding: 10px 0 10px 80px;
     position: fixed;
-    /* background-color: gray; */
 }
 
-.dev-sidebar{
+/* 2. Hug content tightly and reduce interior vertical gaps */
+.dev-sidebar {
     width: 30%;
-    height: 99%;
+    height: fit-content; /* Hugs exact content height */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    gap: 100px; /* Reduced from 50px to eliminate excess bottom space */
     box-shadow: 0 0 20px #090f16;
     border-radius: 8px;
-    /* padding: 10px; */
-    /* background-color:red; */
 }
 
-.dev-sidebar img{
+/* 3. Tighten sidebar top image spacing */
+.dev-sidebar img {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 0px; /* Reduced from 15px */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
+
 
 .dev-profile{
     width: 100%;
@@ -81,17 +82,18 @@ main{
 }
 
 .dev-sidebar p{
+    height:30px;
     text-align: center;
     color: var(--background-color);
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 400;
     font-family:Arial, Helvetica, sans-serif;
+    /* background-color: red; */
 }
 
 .dev-media{
-    display: flex;
     width: 60%;
-    /* margin-top: 80px; */
+    display: flex;
     align-items: center;
     justify-content: space-around;
     margin-bottom: 10px;
@@ -141,7 +143,26 @@ main{
      scroll-behavior: smooth;
 }
 
-header{
+/* Custom Scrollbar for Details Pane */
+.portifolio-details::-webkit-scrollbar {
+    width: 10px;
+}
+
+.portifolio-details::-webkit-scrollbar-track {
+    background: var(--primary-color);
+}
+
+.portifolio-details::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   HEADER & NAVIGATION STYLING
+   ========================================================= */
+
+header {
     width: 100%;
     display: grid;
     place-items: center;
@@ -152,7 +173,7 @@ header{
     box-shadow: 0 2px 5px black;
 }
 
-header  .content{
+header .content {
     width: 100%;
     display: flex;
     align-items: center;
@@ -160,7 +181,12 @@ header  .content{
     padding: 10px;
 }
 
-header  .content span{
+/* Logo "O" Styling */
+header .logo {
+    text-decoration: none;
+}
+
+header .content span {
     width: 50px;
     height: 50px;
     display: grid;
@@ -173,16 +199,59 @@ header  .content span{
     font-weight: 600;
 }
 
-header .content nav{
+/* Desktop Navigation */
+header nav.nav-menu {
     display: flex;
+    align-items: center;
     gap: 40px;
 }
 
-header .content nav a{
+header nav.nav-menu a {
+    position: relative;
     font-size: 1em;
     font-weight: 600;
     color: var(--secondary-color);
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
 }
+
+/* Animated Underline Transition */
+header nav.nav-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+header nav.nav-menu a:hover::after,
+header nav.nav-menu a.active-nav::after {
+    width: 100%;
+}
+
+header nav.nav-menu a.active-nav {
+    color: #ffffff;
+}
+
+/* Hide Hamburger Menu Icon on Desktop */
+header .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Hidden by default on desktop viewports */
+.mobile-header {
+    display: none;
+}
+
 
 /* ABOUT SECTION STARTS HERE */
 #about-section{
@@ -228,132 +297,129 @@ header .content nav a{
     box-shadow: 0 0 10px #090f16;
 }
 
-.about-statistics .stat h2{
+.about-statistics .stat h2 {
     color: var(--secondary-color);
     font-size: 2em;
     font-weight: 600;
+    font-variant-numeric: tabular-nums; /* Prevents text layout shifting while counting */
 }
 
-/* SKILLS SECTION STARTS HERE */
+.about-statistics .stat h2 span {
+    color: var(--secondary-color);
+    font-size: 1em;
+}
 
-#skills-section{
+/* =========================================================
+   SKILLS SECTION (Full Section Code)
+   ========================================================= */
+
+#skills-section {
     width: 100%;
     height: auto;
     display: grid;
     place-items: center;
     margin-bottom: 20px;
     padding-bottom: 50px;
-    border-bottom: 2px solid rgb(241, 239, 239, 0.2);
+    border-bottom: 2px solid rgba(241, 239, 239, 0.2);
 }
 
-.skill-sets-container{
+.skill-sets-container {
     width: 100%;
     display: flex;
-    flex-direction:column;
-    /* background-color: red; */
+    flex-direction: column;
 }
 
-.skill-sets-container h1{
+.skill-sets-container h1 {
     font-size: 2em;
     color: var(--secondary-color);
     font-weight: 600;
     margin-bottom: 20px;
 }
 
-
-.skill-sets-container h3{
+.skill-sets-container h3 {
     font-size: 1rem;
-    color:var(--background-color);
+    color: var(--background-color);
     font-weight: 600;
 }
 
-
-.skill-sets{
-    width:100%;
+.skill-sets {
+    width: 100%;
     height: auto;
     display: flex;
-    gap:50px;
-    /* background-color: green; */
+    gap: 50px;
 }
 
-.skill-set{
+.skill-set {
     width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 10px;  
-    /* background-color: pink; */
+    gap: 10px;
 }
 
-.skill-set .skill-set-content{
-    width:100%;
-    /* height: 5px; */
-    /* background-color: white; */
+.skill-set .skill-set-content {
+    width: 100%;
 }
 
-.skill-set-content .skill-holder{
+.skill-set-content .skill-holder {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.skill-holder i{
+.skill-holder i {
     color: white;
 }
 
-.skill-set-content .fill-cont{
+/* Base progress track container */
+.skill-set-content .fill-cont {
     width: 100%;
     height: 5px;
     background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    overflow: hidden;
 }
 
- .fill-cont #fill-html{
-    width: 99%;
+/* Common base class for animation transitions */
+.fill-cont .fill {
+    width: 0%; /* Resets to 0 so JS smoothly animates to target percentage */
     height: 100%;
+    transition: width 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Original colors strictly preserved */
+.fill-cont #fill-html {
     background-color: rgb(40, 124, 6);
 }
 
-.fill-cont #fill-javascript{
-    width: 70%;
-    height: 100%;
+.fill-cont #fill-javascript {
     background-color: rgb(238, 142, 33);
 }
 
-.fill-cont #fill-tailwind{
-    width: 75%;
-    height: 100%;
+.fill-cont #fill-tailwind {
     background-color: rgb(221, 224, 44);
 }
 
-.fill-cont #fill-bootstrap{
-    width: 70%;
-    height: 100%;
+.fill-cont #fill-bootstrap {
     background-color: rgb(238, 142, 33);
 }
 
-.fill-cont #fill-css{
-    width: 95%;
-    height: 100%;
+.fill-cont #fill-css {
     background-color: rgb(54, 182, 4);
 }
 
-.fill-cont #fill-react{
-    width: 78%;
-    height: 100%;
+.fill-cont #fill-react {
     background-color: rgb(125, 224, 44);
 }
 
-
-.fill-cont #fill-php{
-    width: 50%;
-    height: 100%;
+.fill-cont #fill-php {
     background-color: rgb(224, 32, 18);
 }
 
-.fill-cont #fill-sql{
-    width: 80%;
-    height: 100%;
+.fill-cont #fill-sql {
     background-color: rgb(163, 224, 18);
 }
+
+
 
 
 #portifolio-section{

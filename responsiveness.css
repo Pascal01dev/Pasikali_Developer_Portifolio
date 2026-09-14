@@ -121,6 +121,91 @@
         display: none;
     }
 
+    /* Show mobile header on smaller screens */
+    .mobile-header {
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background-color: var(--primary-color);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .mobile-header-content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 20px;
+    }
+
+    /* Logo Styling */
+    .mobile-logo {
+        text-decoration: none;
+    }
+
+    .mobile-logo span {
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background-color: var(--secondary-color);
+        color: #ffffff;
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+
+    /* Hamburger Toggle Button */
+    .mobile-menu-toggle {
+        background: none;
+        border: none;
+        color: var(--secondary-color);
+        font-size: 1.8rem;
+        cursor: pointer;
+        padding: 4px;
+    }
+
+    /* Expandable Mobile Nav Overlay */
+    .mobile-nav-menu {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-in-out;
+        border-top: 1px solid rgba(241, 239, 239, 0.1);
+    }
+
+    /* Active expanded menu class */
+    .mobile-nav-menu.active {
+        max-height: 400px; /* Expands to fit all nav items */
+        padding: 10px 0;
+    }
+
+    .mobile-nav-menu a {
+        padding: 12px 20px;
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-align: center;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .mobile-nav-menu a:hover,
+    .mobile-nav-menu a.active-nav {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+    }
+
+    /* Layout adjustments for main container under fixed top header */
+    main, .portifolio-content {
+        padding-top: 65px; /* Keeps top header from overlapping content */
+    }
 /* #about-section{
     width: 100%;
     display: flex;
