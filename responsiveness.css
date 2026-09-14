@@ -1,14 +1,4 @@
 @media (max-width: 768px) {
-
-    body{
-        width: 100vw;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; 
-        padding: 0px;
-    }
     main{
         width: 100vw;
         height: auto;
@@ -135,7 +125,7 @@
     .mobile-header {
         display: block;
         width: 100%;
-        position: fixed;
+        position: sticky;
         top: 0;
         left: 0;
         z-index: 1000;
@@ -148,7 +138,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 12px 20px;
+        padding: 5px 20px;
     }
 
     /* Logo Styling */
