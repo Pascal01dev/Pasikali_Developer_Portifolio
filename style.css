@@ -863,6 +863,7 @@ header .menu-toggle {
 .input-set .input input{
     width: 100%;
     outline: none;
+    background-color: transparent;
 }
 
 .contacts-content form textarea{
