@@ -313,7 +313,7 @@
         /* background-color: green; */
     }
 
-    .input-set input{
+    .input-set .input{
         width: 100%;
         height: 35px;
         padding: 20px;
@@ -321,6 +321,13 @@
         border-radius: 8px;
         background-color: rgb(241, 239, 239, 0.1);
     }
+
+    .input-set .input input{
+        width: 100%;
+        outline: none;
+    }
+
+
 
 }
 
