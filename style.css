@@ -29,7 +29,7 @@ main{
     justify-content: center;
     align-items: flex-start; /* Changed from default center/stretch */
     gap: 50px;
-    padding: 10px 0 10px 80px;
+    padding: 10px 0 10px 50px;
     position: fixed;
 }
 
@@ -40,7 +40,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 100px; /* Reduced from 50px to eliminate excess bottom space */
+    gap: 50px; /* Reduced from 50px to eliminate excess bottom space */
     box-shadow: 0 0 20px #090f16;
     border-radius: 8px;
 }
@@ -138,7 +138,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-right: 100px;
+    padding-right: 50px;
     overflow: scroll;
      scroll-behavior: smooth;
 }
