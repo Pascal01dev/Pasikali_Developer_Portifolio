@@ -1,4 +1,14 @@
 @media (max-width: 768px) {
+
+    body{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        padding: 0px;
+    }
     main{
         width: 100vw;
         height: auto;
