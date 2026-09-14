@@ -285,3 +285,58 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+// FORM HANDLING FOR CONTACT FORM
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("feedbackForm");
+  const submitBtn = document.getElementById("submitBtn");
+
+  // Your Google Apps Script Web App Endpoint
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyDuZPKzoJ3OjmFF1P7KzRHx7LJwrq5N0fTyuGzHaBC290LvlVrjR9E1VWn4Bkeki4wOA/exec";
+
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = "Sending...";
+      submitBtn.disabled = true;
+
+      // Extract form values safely
+      const formData = {
+        name: document.getElementById("senderName") ? document.getElementById("senderName").value : "",
+        email: document.getElementById("senderEmail") ? document.getElementById("senderEmail").value : "",
+        phone: document.getElementById("senderPhone") ? document.getElementById("senderPhone").value : "",
+        subject: document.getElementById("senderSubject") ? document.getElementById("senderSubject").value : "",
+        message: document.getElementById("senderMessage") ? document.getElementById("senderMessage").value : ""
+      };
+
+      // Send payload to Google Sheet endpoint
+      fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === "success") {
+          alert("Thank you! Your message has been sent successfully.");
+          form.reset();
+        } else {
+          alert("Submission failed. Please try again.");
+        }
+      })
+      .catch(error => {
+        console.error("Submission Error:", error);
+        alert("An error occurred. Please check your connection.");
+      })
+      .finally(() => {
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      });
+    });
+  }
+});
