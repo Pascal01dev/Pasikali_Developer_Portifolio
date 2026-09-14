@@ -475,14 +475,27 @@
                         <form id="feedbackForm">
                         <!-- First Row -->
                         <div class="input-set">
-                            <input type="text" id="senderName" name="name" placeholder="Your Name" required />
-                            <input type="email" id="senderEmail" name="email" placeholder="Your Email" required />
+                            <div class="input">
+                                <i class="fa-solid fa-id-badge"></i>
+                                <input type="text" id="senderName" name="name" placeholder="Your Name" required />
+                            </div>
+
+                            <div class="input">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" id="senderEmail" name="email" placeholder="Your Email" required />
+                            </div>
                         </div>
 
                         <!-- Second Row -->
                         <div class="input-set">
-                            <input type="tel" id="senderPhone" name="phone" placeholder="Phone Number" />
-                            <input type="text" id="senderSubject" name="subject" placeholder="Subject" required />
+                            <div class="input">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <input type="tel" id="senderPhone" name="phone" placeholder="Phone Number" />
+                            </div>
+                            <div class="input">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <input type="text" id="senderSubject" name="subject" placeholder="Subject" required />
+                            </div>
                         </div>
 
                         <!-- Message Area -->
