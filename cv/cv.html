@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omolo Pasikali - Professional Resume</title>
+
+  <!-- External Styles & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">cv/cv.cv/cv.html
+  <link rel="stylesheet" href="cv.css">
+
+  <!-- html2pdf.js library for clean, client-side PDF export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+  <!-- RESUME CONTAINER -->
+  <div class="resume-wrapper">
+
+    <!-- CONTROLS & NAV TOOLBAR -->
+    <header class="resume-toolbar">
+      <div class="toolbar-top">
+        <div class="profile-meta">
+          <h1 class="user-name">Omolo Pasikali</h1>
+          <p class="user-title">Full-Stack Web Developer &amp; Database Architect</p>
+        </div>
+        <div class="action-buttons">
+          <button id="downloadPdfBtn" class="btn btn-primary">
+            <i class="fa-solid fa-file-arrow-down"></i> Download PDF
+          </button>
+        </div>
+      </div>
+
+      <!-- SEARCH BAR -->
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="resumeSearch" placeholder="Filter skills, experience, qualifications...">
+      </div>
+
+      <!-- SECTION JUMP TABS -->
+      <nav class="nav-tabs" aria-label="Resume Sections">
+        <button class="tab-btn active" data-target="section-education"><i class="fa-solid fa-graduation-cap"></i> Education</button>
+        <button class="tab-btn" data-target="section-experience"><i class="fa-solid fa-briefcase"></i> Experience</button>
+        <button class="tab-btn" data-target="section-skills"><i class="fa-solid fa-code"></i> Skills</button>
+        <button class="tab-btn" data-target="section-leadership"><i class="fa-solid fa-users-gear"></i> Leadership</button>
+        <button class="tab-btn" data-target="section-certifications"><i class="fa-solid fa-certificate"></i> Certifications</button>
+        <button class="tab-btn" data-target="section-languages"><i class="fa-solid fa-language"></i> Languages</button>
+        <button class="tab-btn" data-target="section-voluntary"><i class="fa-solid fa-hand-holding-heart"></i> Voluntary</button>
+      </nav>
+    </header>
+
+    <!-- PRINTABLE RESUME CONTENT -->
+    <main id="printableArea" class="resume-body">
+
+      <!-- 1. EDUCATION -->
+      <section id="section-education" class="card-box printable-section">
+        <div class="section-header">
+          <i class="fa-solid fa-graduation-cap section-icon"></i>
+          <h2>1. Education</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="item-header">
+              <h3 class="item-title">Bachelor of Information Systems</h3>
+              <span class="badge">2024 – Present</span>
+            </div>
+            <p class="item-sub">Kyambogo University (Kampala, Uganda)</p>
+            <p class="item-desc">Undergraduate student pursuing Information Systems, concentrating on software architecture, database management systems, and web technologies.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="item-header">
+              <h3 class="item-title">Uganda Advanced Certificate of Education (UACE)</h3>
+              <span class="status-tag">Completed - 2023</span>
+            </div>
+            <p class="item-sub">Petta Community Secondary School (Tororo, Uganda)</p>
+            <p class="item-desc">Successfully completed upper secondary education, actively participating in academic projects, student leadership, and ICT initiatives.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="item-header">
+              <h3 class="item-title">Uganda Certificate of Education (UCE)</h3>
+              <span class="status-tag">Completed - 2020</span>
+            </div>
+            <p class="item-sub">Mulanda Parents Secondary School (Tororo, Uganda)</p>
+            <p class="item-desc">Core competencies across Physical Sciences, Mathematics, and Computer Fundamentals.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="item-header">
+              <h3 class="item-title">Primary Leaving Examination (PLE)</h3>
+              <span class="status-tag">Completed - 2016</span>
+            </div>
+            <p class="item-sub">Grace of God Nursery & Primary School (Mayuge, Uganda)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. WORKING EXPERIENCE -->
+      <section id="section-experience" class="card-box printable-section">
+        <div class="section-header">
+          <i class="fa-solid fa-briefcase section-icon"></i>
+          <h2>2. Working Experience</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="item-header">
+              <h3 class="item-title">Frontend Developer</h3>
+              <span class="badge">2024 – Present</span>
+            </div>
+            <p class="company-name">Concept Crashers</p>
+            <p class="item-desc">Developing responsive user interfaces with fluid CSS layouts for web applications like <a href="https://agribuddy-pi.vercel.app/" target="_blank">Agribuddy</a> to ensure seamless viewport scaling across mobile, tablet, and desktop viewports.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="item-header">
+              <h3 class="item-title">Database Designer &amp; Developer</h3>
+              <span class="badge">2025</span>
+            </div>
+            <p class="company-name">Concept Crashers</p>
+            <p class="item-desc">Architected structured relational schemas and optimized queries for <a href="https://www.campusballot.tech/" target="_blank">Campus Ballot</a> to handle complex university election datasets and multi-role operations.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="item-header">
+              <h3 class="item-title">IT &amp; Software Support</h3>
+              <span class="badge">2025</span>
+            </div>
+            <p class="company-name">Freelancing</p>
+            <p class="item-desc">Support enterprise IT software services, client system deployments, and digital layout configurations.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="item-header">
+              <h3 class="item-title">Full-Stack Project Developer</h3>
+              <span class="status-tag">2025</span>
+            </div>
+            <p class="company-name">Personal &amp; Client Projects</p>
+            <p class="item-desc">Engineered full-stack applications including Vital Point - HMS, Olam Tourism and more, bridging sleek modern frontends with secure database backends.</p>
+          </div>
+
+          
+        </div>
+      </section>
+
+      <!-- 3. SKILLS -->
+      <section id="section-skills" class="card-box printable-section">
+        <div class="section-header">
+          <i class="fa-solid fa-code section-icon"></i>
+          <h2>3. Skills</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3><i class="fa-brands fa-react accent-text"></i> Frontend Engineering</h3>
+            <div class="tag-group">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript (ES6+)</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">Bootstrap</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3><i class="fa-solid fa-database accent-text"></i> Backend &amp; Databases</h3>
+            <div class="tag-group">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">Oracle DB</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">SQLite</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3><i class="fa-solid fa-terminal accent-text"></i> Tools &amp; Infrastructure</h3>
+            <div class="tag-group">
+              <span class="skill-tag">Git &amp; GitHub</span>
+              <span class="skill-tag">Linux Mint CLI</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Vercel</span>
+              <span class="skill-tag">Cloudflare</span>
+              <span class="skill-tag">Render</span>
+              <span class="skill-tag">Netlify</span>
+              <span class="skill-tag">Wordpress</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3><i class="fa-solid fa-pen-nib accent-text"></i> Design &amp; Prototyping</h3>
+            <div class="tag-group">
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Adobe Illustrator</span>
+              <span class="skill-tag">Photoshop</span>
+              <span class="skill-tag">Canva</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. LEADERSHIP -->
+      <section id="section-leadership" class="card-box printable-section">
+        <div class="section-header">
+          <i class="fa-solid fa-users-gear section-icon"></i>
+          <h2>4. Leadership</h2>
+        </div>
+        <div class="info-block">
+          <h3>Word Press Community Lead</h3>
+          <p class="company-name">Kyambogo University Computer Science Students Association (KYUCSA)</p>
+          <p class="item-desc">Facilitated knowledge-sharing sessions, coordinated technical workshops, and guided community members through WordPress setup, security, and web management solutions.</p>
+        </div>
+
+        <div class="info-block">
+          <h3>Graphics Lead</h3>
+          <p class="company-name">Kyambogo University Computer Science Students Association (KYUCSA)</p>
+          <p class="item-desc">Spearheaded visual design strategies and created high-impact digital assets, branding materials, and user interface prototypes to drive engagement across digital platforms.</p>
+        </div>
+      </section>
+
+      <!-- 5. CERTIFICATIONS -->
+      <section id="section-certifications" class="card-box printable-section">
+        <div class="section-header">
+          <i class="fa-solid fa-certificate section-icon"></i>
+          <h2>5. Certifications</h2>
+        </div>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <span class="cert-date">March 2026</span>
+            <h4 class="cert-title">Intro to React, v9</h4>
+            <p class="cert-issuer">Frontend Masters</p>
+          </div>
+          <div class="cert-card">
+            <span class="cert-date">December 2025</span>
+            <h4 class="cert-title">Tailwind CSS 4+</h4>
+            <p class="cert-issuer">Frontend Masters</p>
+          </div>
+          <div class="cert-card">
+            <span class="cert-date">July 2025</span>
+            <h4 class="cert-title">HTML &amp; CSS Essentials</h4>
+            <p class="cert-issuer">CISCO Networking Academy</p>
+          </div>
+          <div class="cert-card">
+            <span class="cert-date">August 2025</span>
+            <h4 class="cert-title">Intro to SQL &amp; Terminal Basics</h4>
+            <p class="cert-issuer">Scrimba</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. LANGUAGES -->
+      <section id="section-languages" class="card-box printable-section">
+        <div class="section-header">
+          <i class="fa-solid fa-language section-icon"></i>
+          <h2>6. Languages</h2>
+        </div>
+
+        <div class="languages-flex">
+
+          <div class="lang-card">
+            <span class="lang-name">Dhopadhola</span>
+            <span class="lang-level">Native / Mother tongue</span>
+        </div>
+
+          <div class="lang-card">
+            <span class="lang-name">English</span>
+            <span class="lang-level">Fluent / Official</span>
+          </div>
+
+          <div class="lang-card">
+            <span class="lang-name">Luganda</span>
+            <span class="lang-level">Conversational</span>
+          </div>
+
+          <div class="lang-card">
+            <span class="lang-name">Lusoga</span>
+            <span class="lang-level">Conversational</span>
+          </div>
+
+
+          <div class="lang-card">
+            <span class="lang-name">Swahili</span>
+            <span class="lang-level">Elementary</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. VOLUNTARY SERVICE -->
+      <section id="section-voluntary" class="card-box printable-section">
+        <div class="section-header">
+          <i class="fa-solid fa-hand-holding-heart section-icon"></i>
+          <h2>7. Voluntary Service</h2>
+        </div>
+        <div class="space-y">
+          <div class="info-block">
+            <h3>Community ICT Mentorship</h3>
+            <p class="item-desc">Assisting local students and peers with digital literacy, website setup, and open-source development practices.</p>
+          </div>
+          <div class="info-block">
+            <h3>Regional Health Digital Platforms</h3>
+            <p class="item-desc">Collaborating on open digital health systems (such as REHEMA) to improve regional health data accessibility.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Custom Script -->
+  <script src="cv.js"></script>
+</body>
+</html>

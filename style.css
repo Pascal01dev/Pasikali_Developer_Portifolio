@@ -515,11 +515,19 @@ header .menu-toggle {
     /* background-color: red; */
 }
 
-.project-actions button{
+.project-actions a{
     width: 50%;
-    height: 35px;
+    padding: 5px;
+    display: grid;
+    place-items: center;
     border-radius: 8px;
+    text-align:center;
     /* background-color: green; */
+}
+
+.project-actions a button{
+    width: 100%;
+    height: 100%;
 }
 
 .project-actions .btn-primary{
